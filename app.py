@@ -1,8 +1,9 @@
-import os
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from animeflv import AnimeFLV
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/buscar', methods=['GET'])
 def search_anime():
